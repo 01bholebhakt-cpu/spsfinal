@@ -1,0 +1,20 @@
+/scottish-public-school
+│
+├── index.html            (Homepage)
+├── about.html            (About Us, Vision, Mission)
+├── academics.html        (Curriculum, Timings)
+├── admissions.html       (Procedure, Rules)
+├── faculty.html          (Staff details)
+├── facilities.html       (Infrastructure)
+├── notices.html          (Circulars & News)
+├── gallery.html          (Photo Grid + Lightbox)
+├── mandatory-disclosure.html (CBSE Requirements)
+├── contact.html          (Map + Form)
+│
+├── css/
+│   └── style.css         (Modern CSS Variables, Utility Classes)
+│
+├── js/
+│   └── main.js           (Navigation, Counters, Animations)
+│
+└── assets/               (Images/PDFs from your existing site)

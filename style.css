@@ -1,0 +1,186 @@
+/* MODERN CSS RESET & VARIABLES */
+:root {
+    --primary: #00264d; /* Deep Navy */
+    --accent: #d4af37;  /* Premium Gold */
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    height: 60px;
+    width: auto;
+}
+
+.school-name h1 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    min-width: 200px;
+    display: none;
+    padding: 10px 0;
+    border-top: 3px solid var(--accent);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,38,77,0.7), rgba(0,38,77,0.7)), url('https://www.scottishpublicschoolkatihar.com/images/slider/1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* NOTICE BOARD (MODERNIZED MARQUEE) */
+.notice-ticker {
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+}
+
+.ticker-label {
+    background: var(--accent);
+    padding: 5px 15px;
+    font-weight: bold;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+/* GRID LAYOUTS */
+.section-padding {
+    padding: 80px 10%;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-bottom: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 60px 10% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* UTILITIES */
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Add Hamburger JS logic later */
+    .hero-content h2 { font-size: 2rem; }
+}
